@@ -18,14 +18,14 @@ h1 {
   text-align: center;
 }
 
-#racetrack {
+/*#racetrack {
   background-color: green;
-}
+}*/
+
 .player1 {
-  color: pink;
+  
 
 }
 .player2 {
-  color: blue;
 
 }
