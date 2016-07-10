@@ -3,10 +3,10 @@ console.log("sanity sanity sanity!");
 $(document).ready(function() {
 
   $(document).keyup(function(e) {
-// declare winner using conditionals
+    // declare winner using conditionals
     if ($('.player1').hasClass('winner')){
-        alert("Player 1 Wins! Press Reset to Play Again!");
-      } else if($('.player2').hasClass('winner')) {
+      alert("Player 1 Wins! Press Reset to Play Again!");
+    } else if($('.player2').hasClass('winner')) {
       alert("Player 2 Wins! Press Reset to Play Again!");
     }
     // player 1 button mash "1"
@@ -17,6 +17,8 @@ $(document).ready(function() {
     // if player 1 reaches the end of the track
     if ($('.raceTrack1').width() <= $('.player1').offset().left){
       $('.player1').addClass("winner");
+      $('.player1').clearQueue();
+      $('.player1').stop();
     }
   });
 
@@ -28,7 +30,8 @@ $(document).ready(function() {
     // if player 2 reaches the end of the track
     if ($('.raceTrack2').width() <= $('.player2').offset().left){
       $('.player2').addClass("winner");
-
+      $('.player2').clearQueue();
+      $('.player2').stop();
     }
   });
 
