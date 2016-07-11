@@ -10,8 +10,8 @@ $(document).ready(function() {
       $player1.css("left",("+=40"));
       // if player 1 reaches the end of the track
       if ($raceTrack1.width() <= $player1.offset().left + $player1.outerWidth()) {
-        stopMvmt();
         $("h2").append("You saved Matt Damon. Good job! We get more Jason Bourne movies!");
+        stopMvmt();
       }
     }
   });
@@ -28,6 +28,11 @@ $(document).ready(function() {
     }
   });
 
+$('.btn-primary').on("click", function(){
+  $player1.css("left",("0"));
+  $player2.css("left",("0"));
+});
+
   // halts the movement after image meets the end of the window!
   function stopMvmt() {
     $player1.clearQueue();
@@ -36,9 +41,3 @@ $(document).ready(function() {
   }
 
 });
-
-// if ($('.player1').offset().left > 1000){
-//   console.log("p1 win");
-// } else if($('.player2').offset().left > 1000) {
-//   console.log("p2 win");
-// }
