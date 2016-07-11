@@ -36,7 +36,7 @@ $(document).ready(function() {
     }
   });
 }
-  // reset the game by moving both players back to original position, clears the text, and hides the button
+// this function will prevent further key press after a winner is declared
   function stopMvmt() {
     $player1.clearQueue();
     $player1.stop();
@@ -44,7 +44,7 @@ $(document).ready(function() {
     $player1.stop();
     $(document).off("keyup");
   }
-
+  // reset the game by moving both players back to original position, clears the text, and hides the button
   $('#reset').on("click", function() {
     stopMvmt();
     p1move();
