@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var $player1 = $(".player1");
   var $player2 = $(".player2");
   var $raceTrack1 = $(".raceTrack1");
@@ -10,7 +11,8 @@ $(document).ready(function() {
       $player1.css("left",("+=40"));
       // if player 1 reaches the end of the track
       if ($raceTrack1.width() <= $player1.offset().left + $player1.outerWidth()) {
-        $("h2").append("You saved Matt Damon. Good job! We get more Jason Bourne movies!");
+        $("h2").text("You saved Matt Damon. Good job! We get more Jason Bourne movies!");
+        $("#singlebutton").removeClass("hidden");
         stopMvmt();
       }
     }
@@ -22,7 +24,9 @@ $(document).ready(function() {
       $player2.css("left",("+=40"));
       // if player 2 reaches the end of the track
       if ($raceTrack2.width() <= $player2.offset().left + $player2.outerWidth()) {
-        $("h2").append("Bad job. You let Jimmy Kimmel capture Matt Damon! No chance for Good Will Hunting 2 now!");
+        $("h2").text("Bad job. You let Jimmy Kimmel capture Matt Damon! No chance for Good Will Hunting 2 now!");
+        $("#singlebutton").removeClass("hidden");
+
         stopMvmt();
       }
     }
@@ -31,6 +35,8 @@ $(document).ready(function() {
 $('.btn-primary').on("click", function(){
   $player1.css("left",("0"));
   $player2.css("left",("0"));
+  $("h2").text("     ");
+  $("#singlebutton").addClass("hidden");
 });
 
   // halts the movement after image meets the end of the window!

@@ -46,3 +46,7 @@ img {
 .top{
   margin-top: 600px;
 }
+
+.hidden {
+  display: none;
+}
