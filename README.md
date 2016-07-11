@@ -5,7 +5,7 @@ This project was completed over the course of two days. The goal was to complete
 
 ##Technologies Used
 *javascript
-*jquery
+*jQuery
 
 ##Existing Features
 *Functional keyboard clicks using "1" and "0" to move forwards
