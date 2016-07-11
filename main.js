@@ -24,7 +24,6 @@ $(document).ready(function() {
       if ($raceTrack1.width() <= $player1.offset().left + $player1.outerWidth()) {
         $("h2").text("You saved Matt Damon. Good job! We get more Jason Bourne movies!");
         $("#reset").removeClass("hidden");
-        stopMvmt();
       }
     }
   });
@@ -36,14 +35,14 @@ $(document).ready(function() {
       if ($raceTrack2.width() <= $player2.offset().left + $player2.outerWidth()) {
         $("h2").text("Bad job. You let Jimmy Kimmel capture Matt Damon! No chance for Good Will Hunting 2 now!");
         $("#reset").removeClass("hidden");
-        stopMvmt();
       }
     }
   });
   // halts the movement after image meets the end of the window!
   function stopMvmt() {
     $player1.clearQueue();
+    $player1.stop();
     $player2.clearQueue();
-    $(document).off("keyup");
+    $player2.stop();
   }
 });
