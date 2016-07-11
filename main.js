@@ -38,11 +38,4 @@ $(document).ready(function() {
       }
     }
   });
-  // halts the movement after image meets the end of the window!
-  function stopMvmt() {
-    $player1.clearQueue();
-    $player1.stop();
-    $player2.clearQueue();
-    $player2.stop();
-  }
 });
