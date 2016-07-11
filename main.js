@@ -1,38 +1,46 @@
-console.log("sanity sanity sanity!");
-
 $(document).ready(function() {
 
-  $(document).keyup(function(e) {
-    // declare winner using conditionals
-    if ($('.player1').hasClass('winner')){
-      alert("Player 1 Wins! Press Reset to Play Again!");
-    } else if($('.player2').hasClass('winner')) {
-      alert("Player 2 Wins! Press Reset to Play Again!");
-    }
-    // player 1 button mash "1"
+// player 1 button "1" mash
+  $(document).keyup(function move(e) {
+    if (e.which == 49) {
+      $(".player1").animate({
+        "left": "+=60px"
+      });
 
-    if(e.which == 49) {
-      $(".player1").animate({marginLeft: "+=60"});
-    }
-    // if player 1 reaches the end of the track
-    if ($('.raceTrack1').width() <= $('.player1').offset().left){
-      $('.player1').addClass("winner");
-      $('.player1').clearQueue();
-      $('.player1').stop();
+      // if player 1 reaches the end of the track
+      if ($('.raceTrack1').width() <= $('.player1').offset().left + $('.player1').outerWidth()) {
+        console.log("test");
+        stopMvmt();
+      }
     }
   });
 
   // player 2 button "0" mash
   $(document).keyup(function(e) {
-    if(e.which == 48) {
-      $(".player2").animate({marginLeft: "+=60"});
-    }
-    // if player 2 reaches the end of the track
-    if ($('.raceTrack2').width() <= $('.player2').offset().left){
-      $('.player2').addClass("winner");
-      $('.player2').clearQueue();
-      $('.player2').stop();
+    if (e.which == 48) {
+      $(".player2").animate({
+        "left": "+=60px"
+      });
+      // if player 2 reaches the end of the track
+      if ($('.raceTrack2').width() <= $('.player2').offset().left + $('.player2').outerWidth()) {
+        console.log("test");
+        stopMvmt();
+      }
     }
   });
 
+// halts the movement after image meets the end of the window!
+  function stopMvmt() {
+    $('.player1').clearQueue();
+    $('.player1').stop();
+    $('.player2').clearQueue();
+    $('.player2').stop();
+  }
+
 });
+
+// if ($('.player1').offset().left > 1000){
+//   console.log("p1 win");
+// } else if($('.player2').offset().left > 1000) {
+//   console.log("p2 win");
+// }

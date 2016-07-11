@@ -13,11 +13,6 @@ h1 {
   font-size: 60px;
   font-weight: bold;
 }
-/*.header {
-display: inline-block;
-vertical-align: top;
-margin: 30px 0;
-}*/
 
 img {
   height: 100px;
@@ -25,13 +20,18 @@ img {
   border-radius: 50%;
 }
 
+.player1{
+  position:relative;
+  max-width: 100px;
+}
+.player2{
+  max-width: 100px;
+  position:relative;
+}
 .raceTrack1{
   top: 190px;
-
 }
 
 .raceTrack2{
   top: 230px;
-
-
 }
