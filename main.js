@@ -1,10 +1,10 @@
 $(document).ready(function() {
-  // player 1 button "1" mash
   var $player1 = $(".player1");
   var $player2 = $(".player2");
   var $raceTrack1 = $(".raceTrack1");
   var $raceTrack2 = $(".raceTrack2");
 
+  // player 1 button "1" mash
   $(document).keyup(function move(e) {
     if (e.which == 49) {
       $player1.css("left",("+=40"));
