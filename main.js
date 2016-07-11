@@ -11,6 +11,7 @@ $(document).ready(function() {
       // if player 1 reaches the end of the track
       if ($raceTrack1.width() <= $player1.offset().left + $player1.outerWidth()) {
         stopMvmt();
+        $("h2").append("You saved Matt Damon. Good job! We get more Jason Bourne movies!");
       }
     }
   });
@@ -21,6 +22,7 @@ $(document).ready(function() {
       $player2.css("left",("+=40"));
       // if player 2 reaches the end of the track
       if ($raceTrack2.width() <= $player2.offset().left + $player2.outerWidth()) {
+        $("h2").append("Bad job. You let Jimmy Kimmel capture Matt Damon! No chance for Good Will Hunting 2 now!");
         stopMvmt();
       }
     }

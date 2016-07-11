@@ -14,6 +14,13 @@ h1 {
   font-weight: bold;
 }
 
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
 img {
   height: 100px;
   width: 100px;
@@ -36,6 +43,6 @@ img {
   top: 230px;
 }
 
-.btn-primary {
-  top: 300px;
+.top{
+  margin-top: 600px;
 }
