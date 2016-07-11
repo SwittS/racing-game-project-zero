@@ -26,7 +26,6 @@ $(document).ready(function() {
       if ($raceTrack2.width() <= $player2.offset().left + $player2.outerWidth()) {
         $("h2").text("Bad job. You let Jimmy Kimmel capture Matt Damon! No chance for Good Will Hunting 2 now!");
         $("#singlebutton").removeClass("hidden");
-
         stopMvmt();
       }
     }

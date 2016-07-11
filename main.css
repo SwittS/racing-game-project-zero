@@ -21,6 +21,21 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+
+ul{
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+}
+
 img {
   height: 100px;
   width: 100px;
