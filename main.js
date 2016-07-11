@@ -1,15 +1,15 @@
 $(document).ready(function() {
+  // player 1 button "1" mash
+  var $player1 = $(".player1");
+  var $player2 = $(".player2");
+  var $raceTrack1 = $(".raceTrack1");
+  var $raceTrack2 = $(".raceTrack2");
 
-// player 1 button "1" mash
   $(document).keyup(function move(e) {
     if (e.which == 49) {
-      $(".player1").animate({
-        "left": "+=60px"
-      });
-
+      $player1.css("left",("+=40"));
       // if player 1 reaches the end of the track
-      if ($('.raceTrack1').width() <= $('.player1').offset().left + $('.player1').outerWidth()) {
-        console.log("test");
+      if ($raceTrack1.width() <= $player1.offset().left + $player1.outerWidth()) {
         stopMvmt();
       }
     }
@@ -18,23 +18,19 @@ $(document).ready(function() {
   // player 2 button "0" mash
   $(document).keyup(function(e) {
     if (e.which == 48) {
-      $(".player2").animate({
-        "left": "+=60px"
-      });
+      $player2.css("left",("+=40"));
       // if player 2 reaches the end of the track
-      if ($('.raceTrack2').width() <= $('.player2').offset().left + $('.player2').outerWidth()) {
-        console.log("test");
+      if ($raceTrack2.width() <= $player2.offset().left + $player2.outerWidth()) {
         stopMvmt();
       }
     }
   });
 
-// halts the movement after image meets the end of the window!
+  // halts the movement after image meets the end of the window!
   function stopMvmt() {
-    $('.player1').clearQueue();
-    $('.player1').stop();
-    $('.player2').clearQueue();
-    $('.player2').stop();
+    $player1.clearQueue();
+    $player1.clearQueue();
+    $(document).off("keyup");
   }
 
 });

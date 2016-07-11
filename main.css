@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Mountain_in_Wadi_Rum,_Jordan.jpg");
+  background-image: url("http://i.imgur.com/D6mWwae.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -20,13 +20,13 @@ img {
   border-radius: 50%;
 }
 
-.player1{
+.player1 {
   position:relative;
   max-width: 100px;
 }
-.player2{
-  max-width: 100px;
+.player2 {
   position:relative;
+  max-width: 100px;
 }
 .raceTrack1{
   top: 190px;
